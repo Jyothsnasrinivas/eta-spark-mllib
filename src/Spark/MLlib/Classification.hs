@@ -67,3 +67,18 @@ type instance Inherits LogisticRegressionWithSGD =
     '[GeneralizedLinearAlgorithm LogisticRegressionModel]
 
 -- End org.apache.spark.mllib.classification.LogisticRegressionWithSGD
+
+-- Start org.apache.spark.mllib.classification.NaiveBayes
+
+foreign import java unsafe getLambda :: Java NaiveBayes Double
+
+foreign import java unsafe getModelType :: Java NaiveBayes String
+
+foreign import java unsafe "run"
+  runNaiveBayes :: RDD LabeledPoint -> Java NaiveBayes NaiveBayesModel
+
+foreign import java unsafe setLambda :: Double -> Java NaiveBayes NaiveBayes
+
+foreign import java unsafe setModelType :: Double -> Java NaiveBayes NaiveBayes
+
+-- End org.apache.spark.mllib.classification.NaiveBayes

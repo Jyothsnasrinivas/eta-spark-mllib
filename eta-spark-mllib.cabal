@@ -13,14 +13,15 @@ maintainer:          jyothsnasrinivas17@gmail.com
 category:            Distributed computing
 build-type:          Simple
 -- extra-source-files:
-cabal-version:       >=1.10
+cabal-version:         >=1.10
 
 library
   exposed-modules:     Spark.MLlib.Types
                        Spark.MLlib.Classification
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.8 && <4.9, eta-spark
+  build-depends:       base >=4.8 && <4.9,
+                       eta-spark
   hs-source-dirs:      src
   default-language:    Haskell2010
 

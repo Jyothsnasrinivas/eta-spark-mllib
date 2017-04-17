@@ -60,3 +60,10 @@ foreign import java unsafe
   setNumClasses :: Int -> Java LogisticRegressionWithLBFGS LogisticRegressionWithLBFGS
 
 -- End org.apache.spark.mllib.classification.LogisticRegressionWithLBFGS
+
+-- Start org.apache.spark.mllib.classification.LogisticRegressionWithSGD
+
+type instance Inherits LogisticRegressionWithSGD =
+    '[GeneralizedLinearAlgorithm LogisticRegressionModel]
+
+-- End org.apache.spark.mllib.classification.LogisticRegressionWithSGD

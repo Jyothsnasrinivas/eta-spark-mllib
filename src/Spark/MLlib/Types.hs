@@ -51,3 +51,11 @@ data {-# CLASS "org.apache.spark.mllib.regression.StreamingLinearAlgorithm" #-}
 data {-# CLASS "org.apache.spark.mllib.classification.SVMModel" #-}
   SVMModel = SVMModel (Object# SVMModel)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.classification.SVMWithSGD" #-}
+  SVMWithSGD = SVMWithSGD (Object# SVMWithSGD)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.classification.impl.GLMClassificationModel" #-}
+ GLMClassificationModel= GLMClassificationModel (Object# GLMClassificationModel)
+  deriving Class

@@ -138,3 +138,9 @@ foreign import java unsafe "clearThreshold"
   clearThresholdSVMModel :: Java SVMModel SVMModel
 
 -- End org.apache.spark.mllib.classification.SVMModel
+
+-- Start org.apache.spark.mllib.classification.SVMWithSGD
+
+type instance Inherits SVMWithSGD = '[GeneralizedLinearAlgorithm SVMModel]
+
+-- End org.apache.spark.mllib.classification.SVMWithSGD

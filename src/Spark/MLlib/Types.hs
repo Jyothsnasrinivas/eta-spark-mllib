@@ -31,3 +31,11 @@ data {-# CLASS "org.apache.spark.mllib.regression.LabeledPoint" #-}
 data {-# CLASS "org.apache.spark.mllib.classification.LogisticRegressionWithLBFGS" #-}
   LogisticRegressionWithLBFGS = LogisticRegressionWithLBFGS (Object# LogisticRegressionWithLBFGS)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.classification.LogisticRegressionWithSGD" #-}
+  LogisticRegressionWithSGD = LogisticRegressionWithSGD (Object# LogisticRegressionWithSGD)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.classification.NaiveBayes" #-}
+  NaiveBayes = NaiveBayes (Object# NaiveBayes)
+  deriving Class

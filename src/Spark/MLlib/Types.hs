@@ -40,6 +40,10 @@ data {-# CLASS "org.apache.spark.mllib.classification.NaiveBayes" #-}
   NaiveBayes = NaiveBayes (Object# NaiveBayes)
   deriving Class
 
+data {-# CLASS "org.apache.spark.mllib.classification.NaiveBayesModel" #-}
+  NaiveBayesModel = NaiveBayesModel (Object# NaiveBayesModel)
+  deriving Class
+
 data {-# CLASS "org.apache.spark.mllib.classification.StreamingLogisticRegressionWithSGD" #-}
   StreamingLogisticRegressionWithSGD = StreamingLogisticRegressionWithSGD (Object# StreamingLogisticRegressionWithSGD)
   deriving Class

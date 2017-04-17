@@ -8,7 +8,7 @@ import Spark.MLlib.Types
 import Spark.Core
 
 data {-# CLASS "double[][]"  #-} JDoubleArrays  = JDoubleArrays  (Object# JDoubleArrays)
-  deriving
+  deriving Class
 
 -- Start org.apache.spark.mllib.classification.ClassificationModel
 
@@ -100,10 +100,11 @@ foreign import java unsafe pi :: Java NaiveBayesModel JDoubleArray
 foreign import java unsafe predictPosibilities :: RDD Vector
                                                -> Java NaiveBayesModel (RDD Vector)
 
-foreign import java unsafe predictPosibilities :: Vector
+foreign import java unsafe "predictPosibilities" predictPosibilities2 :: Vector
                                               -> Java NaiveBayesModel Vector
 
-foreign import java unsafe save :: SparkContext -> String -> Java NaiveBayesModel ()
+foreign import java unsafe "save"
+  saveNaiveBayesModel :: SparkContext -> String -> Java NaiveBayesModel ()
 
 foreign import java unsafe theta :: Java NaiveBayesModel JDoubleArrays
 

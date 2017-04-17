@@ -3,8 +3,12 @@
 module Spark.MLlib.Classification where
 
 import Java
+import Java.Array
 import Spark.MLlib.Types
 import Spark.Core
+
+data {-# CLASS "double[][]"  #-} JDoubleArrays  = JDoubleArrays  (Object# JDoubleArrays)
+  deriving
 
 -- Start org.apache.spark.mllib.classification.ClassificationModel
 
@@ -82,3 +86,55 @@ foreign import java unsafe setLambda :: Double -> Java NaiveBayes NaiveBayes
 foreign import java unsafe setModelType :: Double -> Java NaiveBayes NaiveBayes
 
 -- End org.apache.spark.mllib.classification.NaiveBayes
+
+-- Start org.apache.spark.mllib.classification.NaiveBayesModel
+
+type instance Inherits NaiveBayesModel = '[Object, ClassificationModel]
+
+foreign import java unsafe labels :: Java NaiveBayesModel JDoubleArray
+
+foreign import java unsafe modelType :: Java NaiveBayesModel String
+
+foreign import java unsafe pi :: Java NaiveBayesModel JDoubleArray
+
+foreign import java unsafe predictPosibilities :: RDD Vector
+                                               -> Java NaiveBayesModel (RDD Vector)
+
+foreign import java unsafe predictPosibilities :: Vector
+                                              -> Java NaiveBayesModel Vector
+
+foreign import java unsafe save :: SparkContext -> String -> Java NaiveBayesModel ()
+
+foreign import java unsafe theta :: Java NaiveBayesModel JDoubleArrays
+
+-- End org.apache.spark.mllib.classification.NaiveBayesModel
+
+-- Start org.apache.spark.mllib.classification.StreamingLogisticRegressionWithSGD
+
+type instance Inherits StreamingLogisticRegressionWithSGD = '[StreamingLinearAlgorithm LogisticRegressionModel LogisticRegressionWithSGD]
+
+foreign import java unsafe setInitialWeights :: Vector
+    -> Java StreamingLogisticRegressionWithSGD StreamingLogisticRegressionWithSGD
+
+foreign import java unsafe setMiniBatchFraction :: Double
+    -> Java StreamingLogisticRegressionWithSGD StreamingLogisticRegressionWithSGD
+
+foreign import java unsafe setNumIterations :: Int
+    -> Java StreamingLogisticRegressionWithSGD StreamingLogisticRegressionWithSGD
+
+foreign import java unsafe setRegParam :: Double
+    -> Java StreamingLogisticRegressionWithSGD StreamingLogisticRegressionWithSGD
+
+foreign import java unsafe setStepSize :: Double
+    -> Java StreamingLogisticRegressionWithSGD StreamingLogisticRegressionWithSGD
+
+-- End org.apache.spark.mllib.classification.StreamingLogisticRegressionWithSGD
+
+-- Start org.apache.spark.mllib.classification.SVMModel
+
+type instance Inherits SVMModel = '[GeneralizedLinearModel]
+
+foreign import java unsafe "clearThreshold"
+  clearThresholdSVMModel :: Java SVMModel SVMModel
+
+-- End org.apache.spark.mllib.classification.SVMModel

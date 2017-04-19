@@ -195,3 +195,7 @@ data {-# CLASS "org.apache.spark.mllib.evaluation.binary.FalsePositiveRate" #-}
 data {-# CLASS "org.apache.spark.mllib.evaluation.binary.Precision" #-}
  Precision = Precision (Object# Precision)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.evaluation.binary.Recall" #-}
+ Recall = Recall (Object# Recall)
+  deriving Class

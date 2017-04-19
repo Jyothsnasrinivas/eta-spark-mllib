@@ -207,3 +207,7 @@ data {-# CLASS "org.apache.spark.mllib.feature.ChiSqSelector" #-}
 data {-# CLASS "org.apache.spark.mllib.feature.ChiSqSelectorModel" #-}
  ChiSqSelectorModel = ChiSqSelectorModel (Object# ChiSqSelectorModel)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.ElementwiseProduct" #-}
+ ElementwiseProduct = ElementwiseProduct (Object# ElementwiseProduct)
+  deriving Class

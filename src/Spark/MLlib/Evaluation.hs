@@ -58,3 +58,32 @@ foreign import java unsafe weightedRecall :: Java MulticlassMetrics Double
 foreign import java unsafe weightedTruePositiveRate :: Java MulticlassMetrics Double
 
 -- End org.apache.spark.mllib.evaluation.MulticlassMetrics
+
+-- Start org.apache.spark.mllib.evaluation.MultilabelMetrics
+
+foreign import java unsafe "accuracy" accuracyMMetrics :: Java MultilabelMetrics Double
+
+foreign import java unsafe f1Measure  :: Java MultilabelMetrics Double
+
+foreign import java unsafe "f1Measure"
+  f1MeasureDouble :: Double -> Java MultilabelMetrics Double
+
+foreign import java unsafe hammingLoss  :: Java MultilabelMetrics Double
+
+foreign import java unsafe "labels" labelsMMetrics  :: Java MultilabelMetrics JDoubleArray
+
+foreign import java unsafe microF1Measure :: Java MultilabelMetrics Double
+
+foreign import java unsafe microPrecision :: Java MultilabelMetrics Double
+
+foreign import java unsafe microRecall :: Java MultilabelMetrics Double
+
+foreign import java unsafe "precision" precisionMMetrics :: Java MultilabelMetrics Double
+
+foreign import java unsafe "precision" precisionDoubleMMetrics :: Java MultilabelMetrics Double
+
+foreign import java unsafe "recall" recallMMetrics :: Java MultilabelMetrics Double
+
+foreign import java unsafe "recall" recallDoubleMMetrics :: Java MultilabelMetrics Double
+
+foreign import java unsafe subsetAccuracy :: Java MultilabelMetrics Double

@@ -61,5 +61,37 @@ data {-# CLASS "org.apache.spark.mllib.classification.SVMWithSGD" #-}
   deriving Class
 
 data {-# CLASS "org.apache.spark.mllib.classification.impl.GLMClassificationModel" #-}
- GLMClassificationModel= GLMClassificationModel (Object# GLMClassificationModel)
+ GLMClassificationModel = GLMClassificationModel (Object# GLMClassificationModel)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.BisectingKMeans" #-}
+ BisectingKMeans = BisectingKMeans (Object# BisectingKMeans)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.BisectingKMeansModel" #-}
+ BisectingKMeansModel = BisectingKMeansModel (Object# BisectingKMeansModel)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.LDAModel" #-}
+ LDAModel = LDAModel (Object# LDAModel)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.DistributedLDAModel" #-}
+ DistributedLDAModel = DistributedLDAModel (Object# DistributedLDAModel)
+  deriving Class
+
+-- data {-# CLASS "org.apache.spark.mllib.linalg.Vector" #-}
+--  Vector = Vector (Object# Vector)
+--   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.linalg.Vector[]" #-}
+ VectorArray = VectorArray (Object# VectorArray)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.ExpectationSum" #-}
+ ExpectationSum = ExpectationSum (Object# ExpectationSum)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.GaussianMixture" #-}
+ GaussianMixture = GaussianMixture (Object# GaussianMixture)
   deriving Class

@@ -227,3 +227,35 @@ data {-# CLASS "org.apache.spark.mllib.feature.IDF$DocumentFrequencyAggregator" 
 data {-# CLASS "org.apache.spark.mllib.feature.IDFModel" #-}
  IDFModel = IDFModel (Object# IDFModel)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.Normalizer" #-}
+ Normalizer = Normalizer (Object# Normalizer)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.PCA" #-}
+ PCA = PCA (Object# PCA)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.PCAModel" #-}
+ PCAModel = PCAModel (Object# PCAModel)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.StandardScaler" #-}
+ StandardScaler = StandardScaler (Object# StandardScaler)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.StandardScalerModel" #-}
+ StandardScalerModel = StandardScalerModel (Object# StandardScalerModel)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.VocabWord" #-}
+ VocabWord = VocabWord (Object# VocabWord)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.Word2Vec" #-}
+ Word2Vec = Word2Vec (Object# Word2Vec)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.Word2VecModel" #-}
+ Word2VecModel = Word2VecModel (Object# Word2VecModel)
+  deriving Class

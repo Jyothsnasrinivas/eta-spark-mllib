@@ -306,3 +306,9 @@ foreign import java unsafe
   "trainOn" trainOnSKMeans :: JavaDStream Vector -> Java StreamingKMeans ()
 
 -- End org.apache.spark.mllib.clustering.StreamingKMeans
+
+-- Start org.apache.spark.mllib.clustering.StreamingKMeansModel
+
+type instance Inherits StreamingKMeansModel = '[KMeansModel]
+
+-- End org.apache.spark.mllib.clustering.StreamingKMeansModel

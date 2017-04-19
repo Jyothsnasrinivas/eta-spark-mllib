@@ -175,3 +175,7 @@ data {-# CLASS "org.apache.spark.mllib.evaluation.BinaryClassificationMetrics" #
 data {-# CLASS "org.apache.spark.mllib.evaluation.MulticlassMetrics" #-}
  MulticlassMetrics = MulticlassMetrics (Object# MulticlassMetrics)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.evaluation.MultilabelMetrics" #-}
+ MultilabelMetrics = MultilabelMetrics (Object# MultilabelMetrics)
+  deriving Class

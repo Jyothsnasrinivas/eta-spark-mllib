@@ -199,3 +199,7 @@ data {-# CLASS "org.apache.spark.mllib.evaluation.binary.Precision" #-}
 data {-# CLASS "org.apache.spark.mllib.evaluation.binary.Recall" #-}
  Recall = Recall (Object# Recall)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.ChiSqSelector" #-}
+ ChiSqSelector = ChiSqSelector (Object# ChiSqSelector)
+  deriving Class

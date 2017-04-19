@@ -203,3 +203,7 @@ data {-# CLASS "org.apache.spark.mllib.evaluation.binary.Recall" #-}
 data {-# CLASS "org.apache.spark.mllib.feature.ChiSqSelector" #-}
  ChiSqSelector = ChiSqSelector (Object# ChiSqSelector)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.ChiSqSelectorModel" #-}
+ ChiSqSelectorModel = ChiSqSelectorModel (Object# ChiSqSelectorModel)
+  deriving Class

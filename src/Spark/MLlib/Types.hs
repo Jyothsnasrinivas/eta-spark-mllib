@@ -163,3 +163,11 @@ data {-# CLASS "org.apache.spark.streaming.dstream.JavaDStream" #-}
 data {-# CLASS "org.apache.spark.graphx.Graph" #-}
  Graph vd ed = Graph (Object# (Graph vd ed))
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.evaluation.AreaUnderCurve" #-}
+ AreaUnderCurve = AreaUnderCurve (Object# AreaUnderCurve)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.evaluation.BinaryClassificationMetrics" #-}
+ BinaryClassificationMetrics = BinaryClassificationMetrics (Object# BinaryClassificationMetrics)
+  deriving Class

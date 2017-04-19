@@ -41,5 +41,17 @@ foreign import java unsafe scalingVec :: Java ElementwiseProduct Vector
 
 foreign import java unsafe "transform"
   transformEP :: Vector -> Java ElementwiseProduct Vector
-  
+
 -- End org.apache.spark.mllib.feature.ElementwiseProduct
+
+-- Start org.apache.spark.mllib.feature.HashingTF
+
+foreign import java unsafe indexOf :: Object -> Java HashingTF Int
+
+foreign import java unsafe numFeatures :: Java HashingTF Int
+
+foreign import java unsafe setBinary :: Bool -> Java HashingTF HashingTF
+
+foreign import java unsafe setHashAlgorithm :: String -> Java HashingTF HashingTF
+
+-- End org.apache.spark.mllib.feature.HashingTF

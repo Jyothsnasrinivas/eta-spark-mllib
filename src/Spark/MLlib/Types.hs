@@ -179,3 +179,7 @@ data {-# CLASS "org.apache.spark.mllib.evaluation.MulticlassMetrics" #-}
 data {-# CLASS "org.apache.spark.mllib.evaluation.MultilabelMetrics" #-}
  MultilabelMetrics = MultilabelMetrics (Object# MultilabelMetrics)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.evaluation.RankingMetrics" #-}
+ RankingMetrics t = RankingMetrics (Object# (RankingMetrics t))
+  deriving Class

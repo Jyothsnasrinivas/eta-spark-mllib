@@ -1,6 +1,7 @@
 module Spark.MLlib.Feature where
 
 import Java
+import Java.Array
 
 -- Start org.apache.spark.mllib.feature.ChiSqSelector
 
@@ -23,3 +24,13 @@ foreign import java unsafe setPercentile :: Double -> Java ChiSqSelector ChiSqSe
 foreign import java unsafe setSelectorType :: String -> Java ChiSqSelector ChiSqSelector
 
 -- End org.apache.spark.mllib.feature.ChiSqSelector
+
+-- Start org.apache.spark.mllib.feature.ChiSqSelectorModel
+
+foreign import java unsafe save :: SparkContext -> String -> Java ChiSqSelectorModel ()
+
+foreign import java unsafe selectedFeatures :: Java ChiSqSelectorModel JIntArray
+
+foreign import java unsafe transform :: Vector -> Java ChiSqSelectorModel Vector
+
+-- End org.apache.spark.mllib.feature.ChiSqSelectorModel

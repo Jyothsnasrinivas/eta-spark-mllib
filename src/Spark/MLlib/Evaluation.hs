@@ -87,3 +87,15 @@ foreign import java unsafe "recall" recallMMetrics :: Java MultilabelMetrics Dou
 foreign import java unsafe "recall" recallDoubleMMetrics :: Java MultilabelMetrics Double
 
 foreign import java unsafe subsetAccuracy :: Java MultilabelMetrics Double
+
+-- End org.apache.spark.mllib.evaluation.MultilabelMetrics
+
+-- Start org.apache.spark.mllib.evaluation.RankingMetrics
+
+foreign import java unsafe meanAveragePrecision :: Java RankingMetrics Double
+
+foreign import java unsafe ndcgAt :: Int -> Java RankingMetrics Double
+
+foreign import java unsafe precisionAt :: Int -> Java RankingMetrics Double
+
+-- End org.apache.spark.mllib.evaluation.RankingMetrics

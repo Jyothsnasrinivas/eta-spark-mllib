@@ -255,3 +255,19 @@ foreign import java unsafe setTopicConcentration :: Double -> Java LDA LDA
 type instance Inherits LocalLDAModel = '[LDAModel]
 
 -- End org.apache.spark.mllib.clustering.LocalLDAModel
+
+-- Start org.apache.spark.mllib.clustering.PowerIterationClustering
+
+foreign import java unsafe "run"
+  runPIC :: Graph Object Object -> Java PowerIterationClustering PowerIterationClusteringModel
+
+foreign import java unsafe "setInitializationMode"
+  setInitializationModePIC :: String -> Java PowerIterationClustering PowerIterationClustering
+
+foreign import java unsafe "setK"
+  setKPIC :: Int -> Java PowerIterationClustering PowerIterationClustering
+
+foreign import java unsafe "setMaxIterations"
+  setMaxIterationsPIC :: Int -> Java PowerIterationClustering PowerIterationClustering
+
+-- End org.apache.spark.mllib.clustering.PowerIterationClustering

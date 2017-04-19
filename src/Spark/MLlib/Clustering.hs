@@ -125,3 +125,25 @@ foreign import java unsafe "setMaxIterations"
 
 foreign import java unsafe "setSeed"
   setSeedGM :: Int64 -> Java GaussianMixture GaussianMixture
+
+-- End org.apache.spark.mllib.clustering.GaussianMixture
+
+-- Start org.apache.spark.mllib.clustering.GaussianMixtureModel
+
+foreign import java unsafe gaussians :: Java GaussianMixtureModel MultivariateGaussianArray
+
+foreign import java unsafe "k" kGMM :: Java GaussianMixtureModel Int
+
+foreign import java unsafe "predict" predictGMM :: JavaRDD Vector
+  -> Java GaussianMixtureModel (JavaRDD JInteger)
+
+foreign import java unsafe "predict" predictRDDGMM :: RDD Vector
+  -> Java GaussianMixtureModel (RDD Object)
+
+foreign import java unsafe "predict" predictVector :: Vector
+  -> Java GaussianMixtureModel Int
+
+foreign import java unsafe "save" saveGMM :: SparkContext -> String
+  -> Java GaussianMixtureModel ()
+
+-- End org.apache.spark.mllib.clustering.GaussianMixtureModel

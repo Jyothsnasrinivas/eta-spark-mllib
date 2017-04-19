@@ -139,3 +139,11 @@ data {-# CLASS "org.apache.spark.mllib.clustering.PowerIterationClusteringModel"
 data {-# CLASS "org.apache.spark.mllib.clustering.PowerIterationClustering$Assignment" #-}
  Assignment = Assignment (Object# Assignment)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.StreamingKMeans" #-}
+ StreamingKMeans = StreamingKMeans (Object# StreamingKMeans)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.StreamingKMeansModel" #-}
+ StreamingKMeansModel = StreamingKMeansModel (Object# StreamingKMeansModel)
+  deriving Class

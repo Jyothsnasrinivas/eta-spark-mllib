@@ -140,7 +140,7 @@ foreign import java unsafe "predict" predictGMM :: JavaRDD Vector
 foreign import java unsafe "predict" predictRDDGMM :: RDD Vector
   -> Java GaussianMixtureModel (RDD Object)
 
-foreign import java unsafe "predict" predictVector :: Vector
+foreign import java unsafe "predict" predictGMMVector :: Vector
   -> Java GaussianMixtureModel Int
 
 foreign import java unsafe "save" saveGMM :: SparkContext -> String
@@ -184,21 +184,21 @@ foreign import java unsafe "setSeed" setSeedKMeans :: Int64 -> Java KMeans KMean
 
 foreign import java unsafe "clusterCenters" clusterCentersKMM :: Java KMeansModel VectorArray
 
-foreign import java unsafe "computeCost" computeCostRDD :: RDD Vector
+foreign import java unsafe "computeCost" computeCostKMMRDD :: RDD Vector
   -> Java KMeansModel Double
 
-foreign import java unsafe k :: Java BisectingKMeansModel Int
+foreign import java unsafe "k" kKMM :: Java BisectingKMeansModel Int
 
-foreign import java unsafe predict :: JavaRDD Vector
+foreign import java unsafe "predict" predictKMM :: JavaRDD Vector
   -> Java KMeansModel (JavaRDD JInteger)
 
-foreign import java unsafe "predict" predictRDD :: RDD Vector
+foreign import java unsafe "predict" predictKMMRDD :: RDD Vector
   -> Java KMeansModel (RDD Object)
 
-foreign import java unsafe "predict" predictVector :: Vector
+foreign import java unsafe "predict" predictKMMVector :: Vector
   -> Java KMeansModel Int
 
-foreign import java unsafe save :: SparkContext -> String
+foreign import java unsafe "save" saveKMM :: SparkContext -> String
   -> Java KMeansModel ()
 
 -- End org.apache.spark.mllib.clustering.KMeansModel

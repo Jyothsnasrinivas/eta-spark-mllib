@@ -34,3 +34,12 @@ foreign import java unsafe selectedFeatures :: Java ChiSqSelectorModel JIntArray
 foreign import java unsafe transform :: Vector -> Java ChiSqSelectorModel Vector
 
 -- End org.apache.spark.mllib.feature.ChiSqSelectorModel
+
+-- Start org.apache.spark.mllib.feature.ElementwiseProduct
+
+foreign import java unsafe scalingVec :: Java ElementwiseProduct Vector
+
+foreign import java unsafe "transform"
+  transformEP :: Vector -> Java ElementwiseProduct Vector
+  
+-- End org.apache.spark.mllib.feature.ElementwiseProduct

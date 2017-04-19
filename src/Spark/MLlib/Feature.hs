@@ -65,3 +65,9 @@ foreign import java unsafe "fit" fitRDDIDF :: RDD Vector -> Java IDF IDFModel
 foreign import java unsafe minDocFreq :: Java IDF Int
 
 -- End org.apache.spark.mllib.feature.IDF
+
+-- Start org.apache.spark.mllib.feature.IDF$DocumentFrequencyAggregator
+
+foreign import java unsafe idf :: Vector -> Java DocumentFrequencyAggregator Vector
+
+-- End org.apache.spark.mllib.feature.IDF$DocumentFrequencyAggregator

@@ -147,3 +147,11 @@ data {-# CLASS "org.apache.spark.mllib.clustering.StreamingKMeans" #-}
 data {-# CLASS "org.apache.spark.mllib.clustering.StreamingKMeansModel" #-}
  StreamingKMeansModel = StreamingKMeansModel (Object# StreamingKMeansModel)
   deriving Class
+
+data {-# CLASS "org.apache.spark.streaming.dstream.DStream" #-}
+ DStream t = DStream (Object# DStream t)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.streaming.dstream.JavaDStream" #-}
+ JavaDStream t = JavaDStream (Object# JavaDStream t)
+  deriving Class

@@ -99,3 +99,17 @@ foreign import java unsafe ndcgAt :: Int -> Java RankingMetrics Double
 foreign import java unsafe precisionAt :: Int -> Java RankingMetrics Double
 
 -- End org.apache.spark.mllib.evaluation.RankingMetrics
+
+-- Start org.apache.spark.mllib.evaluation.RegressionMetrics
+
+foreign import java unsafe explainedVariance :: Java RegressionMetrics Double
+
+foreign import java unsafe meanAbsoluteError :: Java RegressionMetrics Double
+
+foreign import java unsafe meanSquaredError :: Java RegressionMetrics Double
+
+foreign import java unsafe r2 :: Java RegressionMetrics Double
+
+foreign import java unsafe rootMeanSquaredError :: Java RegressionMetrics Double
+
+-- End org.apache.spark.mllib.evaluation.RegressionMetrics

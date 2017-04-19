@@ -271,3 +271,38 @@ foreign import java unsafe "setMaxIterations"
   setMaxIterationsPIC :: Int -> Java PowerIterationClustering PowerIterationClustering
 
 -- End org.apache.spark.mllib.clustering.PowerIterationClustering
+
+-- Start org.apache.spark.mllib.clustering.StreamingKMeans
+
+foreign import java unsafe decayFactor :: Java StreamingKMeans Double
+
+foreign import java unsafe "k" kStreamingKMeans :: Java StreamingKMeans Int
+
+foreign import java unsafe latestModel :: Java StreamingKMeans StreamingKMeansModel
+
+foreign import java unsafe
+  predictOn :: DStream Vector -> Java StreamingKMeans (DStream Object)
+
+foreign import java unsafe
+  "predictOn" predictOnSKMeans :: JavaDStream Vector -> Java StreamingKMeans (JavaDStream Object)
+
+foreign import java unsafe setDecayFactor :: Double -> Java StreamingKMeans StreamingKMeans
+
+foreign import java unsafe
+  setHalfLife :: Double -> String -> Java StreamingKMeans StreamingKMeans
+
+foreign import java unsafe
+  setInitialCenters :: VectorArray -> JDoubleArray -> Java StreamingKMeans StreamingKMeans
+
+foreign import java unsafe "setK" setKSKMeans :: Int -> Java StreamingKMeans StreamingKMeans
+
+foreign import java unsafe
+  setRandomCenters :: Int -> Double -> Int64 -> Java StreamingKMeans StreamingKMeans
+
+foreign import java unsafe
+  trainOn :: DStream Vector -> Java StreamingKMeans ()
+
+foreign import java unsafe
+  "trainOn" trainOnSKMeans :: JavaDStream Vector -> Java StreamingKMeans ()
+
+-- End org.apache.spark.mllib.clustering.StreamingKMeans

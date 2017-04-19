@@ -95,3 +95,11 @@ data {-# CLASS "org.apache.spark.mllib.clustering.ExpectationSum" #-}
 data {-# CLASS "org.apache.spark.mllib.clustering.GaussianMixture" #-}
  GaussianMixture = GaussianMixture (Object# GaussianMixture)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.GaussianMixtureModel" #-}
+ GaussianMixtureModel = GaussianMixtureModel (Object# GaussianMixtureModel)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.stat.distribution.MultivariateGaussian[]" #-}
+ MultivariateGaussianArray = MultivariateGaussianArray (Object# MultivariateGaussianArray)
+  deriving Class

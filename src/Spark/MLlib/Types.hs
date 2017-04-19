@@ -149,9 +149,13 @@ data {-# CLASS "org.apache.spark.mllib.clustering.StreamingKMeansModel" #-}
   deriving Class
 
 data {-# CLASS "org.apache.spark.streaming.dstream.DStream" #-}
- DStream t = DStream (Object# DStream t)
+ DStream t = DStream (Object# (DStream t))
   deriving Class
 
 data {-# CLASS "org.apache.spark.streaming.dstream.JavaDStream" #-}
- JavaDStream t = JavaDStream (Object# JavaDStream t)
+ JavaDStream t = JavaDStream (Object# (JavaDStream t))
+  deriving Class
+
+data {-# CLASS "org.apache.spark.graphx.Graph" #-}
+ Graph vd ed = Graph (Object# (Graph vd ed))
   deriving Class

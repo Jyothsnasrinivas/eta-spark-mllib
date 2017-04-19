@@ -135,3 +135,7 @@ data {-# CLASS "org.apache.spark.mllib.clustering.PowerIterationClustering" #-}
 data {-# CLASS "org.apache.spark.mllib.clustering.PowerIterationClusteringModel" #-}
  PowerIterationClusteringModel = PowerIterationClusteringModel (Object# PowerIterationClusteringModel)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.PowerIterationClustering$Assignment" #-}
+ Assignment = Assignment (Object# Assignment)
+  deriving Class

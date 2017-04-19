@@ -191,3 +191,7 @@ data {-# CLASS "org.apache.spark.mllib.evaluation.RegressionMetrics" #-}
 data {-# CLASS "org.apache.spark.mllib.evaluation.binary.FalsePositiveRate" #-}
  FalsePositiveRate = FalsePositiveRate (Object# FalsePositiveRate)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.evaluation.binary.Precision" #-}
+ Precision = Precision (Object# Precision)
+  deriving Class

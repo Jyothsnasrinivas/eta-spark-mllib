@@ -55,3 +55,13 @@ foreign import java unsafe setBinary :: Bool -> Java HashingTF HashingTF
 foreign import java unsafe setHashAlgorithm :: String -> Java HashingTF HashingTF
 
 -- End org.apache.spark.mllib.feature.HashingTF
+
+-- Start org.apache.spark.mllib.feature.IDF
+
+foreign import java unsafe "fit" fitIDF :: JavaRDD Vector -> Java IDF IDFModel
+
+foreign import java unsafe "fit" fitRDDIDF :: RDD Vector -> Java IDF IDFModel
+
+foreign import java unsafe minDocFreq :: Java IDF Int
+
+-- End org.apache.spark.mllib.feature.IDF

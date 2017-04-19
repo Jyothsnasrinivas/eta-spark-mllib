@@ -211,3 +211,7 @@ data {-# CLASS "org.apache.spark.mllib.feature.ChiSqSelectorModel" #-}
 data {-# CLASS "org.apache.spark.mllib.feature.ElementwiseProduct" #-}
  ElementwiseProduct = ElementwiseProduct (Object# ElementwiseProduct)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.HashingTF" #-}
+ HashingTF = HashingTF (Object# HashingTF)
+  deriving Class

@@ -103,3 +103,27 @@ data {-# CLASS "org.apache.spark.mllib.clustering.GaussianMixtureModel" #-}
 data {-# CLASS "org.apache.spark.mllib.stat.distribution.MultivariateGaussian[]" #-}
  MultivariateGaussianArray = MultivariateGaussianArray (Object# MultivariateGaussianArray)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.KMeans" #-}
+ KMeans = KMeans (Object# KMeans)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.KMeansModel" #-}
+ KMeansModel = KMeansModel (Object# KMeansModel)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.LDA" #-}
+ LDA = LDA (Object# LDA)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.LDAUtils" #-}
+ LDAUtils = LDAUtils (Object# LDAUtils)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.LocalKMeans" #-}
+ LocalKMeans = LocalKMeans (Object# LocalKMeans)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.LocalLDAModel" #-}
+ LocalLDAModel = LocalLDAModel (Object# LocalLDAModel)
+  deriving Class

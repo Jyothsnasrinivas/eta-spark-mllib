@@ -131,3 +131,7 @@ data {-# CLASS "org.apache.spark.mllib.clustering.LocalLDAModel" #-}
 data {-# CLASS "org.apache.spark.mllib.clustering.PowerIterationClustering" #-}
  PowerIterationClustering = PowerIterationClustering (Object# PowerIterationClustering)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.clustering.PowerIterationClusteringModel" #-}
+ PowerIterationClusteringModel = PowerIterationClusteringModel (Object# PowerIterationClusteringModel)
+  deriving Class

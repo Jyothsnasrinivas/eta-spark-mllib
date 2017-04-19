@@ -215,3 +215,7 @@ data {-# CLASS "org.apache.spark.mllib.feature.ElementwiseProduct" #-}
 data {-# CLASS "org.apache.spark.mllib.feature.HashingTF" #-}
  HashingTF = HashingTF (Object# HashingTF)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.IDF" #-}
+ IDF = IDF (Object# IDF)
+  deriving Class

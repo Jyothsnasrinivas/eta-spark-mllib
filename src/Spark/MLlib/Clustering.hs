@@ -147,3 +147,111 @@ foreign import java unsafe "save" saveGMM :: SparkContext -> String
   -> Java GaussianMixtureModel ()
 
 -- End org.apache.spark.mllib.clustering.GaussianMixtureModel
+
+-- Start org.apache.spark.mllib.clustering.KMeans
+
+foreign import java unsafe getEpsilon :: Java KMeans Double
+
+foreign import java unsafe getInitializationMode :: Java KMeans String
+
+foreign import java unsafe getInitializationSteps :: Java KMeans Int
+
+foreign import java unsafe "getK" getKKMeans :: Java KMeans Int
+
+foreign import java unsafe "getMaxIterations" getMaxIterationsKMeans :: Java KMeans Int
+
+foreign import java unsafe "getSeed" getSeedKMeans :: Java KMeans Int64
+
+foreign import java unsafe "run" runKMeans :: RDD Vector -> Java KMeans KMeansModel
+
+foreign import java unsafe setEpsilon :: Double -> Java KMeans KMeans
+
+foreign import java unsafe setInitializationMode :: String -> Java KMeans KMeans
+
+foreign import java unsafe setInitializationSteps :: Int -> Java KMeans KMeans
+
+foreign import java unsafe setInitialModel :: KMeansModel -> Java KMeans KMeans
+
+foreign import java unsafe "setK" setKKMeans :: Int -> Java KMeans KMeans
+
+foreign import java unsafe "setMaxIterations" setMaxIterationsKMeans :: Int -> Java KMeans KMeans
+
+foreign import java unsafe "setSeed" setSeedKMeans :: Int64 -> Java KMeans KMeans
+
+-- End org.apache.spark.mllib.clustering.KMeans
+
+-- Start org.apache.spark.mllib.clustering.KMeansModel
+
+foreign import java unsafe "clusterCenters" clusterCentersKMM :: Java KMeansModel VectorArray
+
+foreign import java unsafe "computeCost" computeCostRDD :: RDD Vector
+  -> Java KMeansModel Double
+
+foreign import java unsafe k :: Java BisectingKMeansModel Int
+
+foreign import java unsafe predict :: JavaRDD Vector
+  -> Java KMeansModel (JavaRDD JInteger)
+
+foreign import java unsafe "predict" predictRDD :: RDD Vector
+  -> Java KMeansModel (RDD Object)
+
+foreign import java unsafe "predict" predictVector :: Vector
+  -> Java KMeansModel Int
+
+foreign import java unsafe save :: SparkContext -> String
+  -> Java KMeansModel ()
+
+-- End org.apache.spark.mllib.clustering.KMeansModel
+
+-- Start org.apache.spark.mllib.clustering.LDA
+
+foreign import java unsafe getAlpha :: Java LDA Double
+
+foreign import java unsafe getAsymmetricAlpha :: Java LDA Vector
+
+foreign import java unsafe getAsymmetricDocConcentration :: Java LDA Vector
+
+foreign import java unsafe getBeta :: Java LDA Double
+
+foreign import java unsafe getCheckpointInterval :: Java LDA Int
+
+foreign import java unsafe getDocConcentration :: Java LDA Double
+
+foreign import java unsafe "getK" getKLDA :: Java LDA Int
+
+foreign import java unsafe "getMaxIterations" getMaxIterationsLDA :: Java LDA Int
+
+foreign import java unsafe "getSeed" getSeedLDA :: Java LDA Int64
+
+foreign import java unsafe getTopicConcentration :: Java LDA Double
+
+foreign import java unsafe "run" runLDA :: JavaPairRDD JLong Vector -> Java LDA LDAModel
+
+foreign import java unsafe setAlpha :: Double -> Java LDA LDA
+
+foreign import java unsafe "setAlpha" setAlphaVector :: Vector -> Java LDA LDA
+
+foreign import java unsafe setBeta :: Double -> Java LDA LDA
+
+foreign import java unsafe setCheckpointInterval :: Int -> Java LDA LDA
+
+foreign import java unsafe setDocConcentration :: Double -> Java LDA LDA
+
+foreign import java unsafe "setDocConcentration"
+  setDocConcentrationVector :: Vector -> Java LDA LDA
+
+foreign import java unsafe "setK" setKLDA :: Int -> Java LDA LDA
+
+foreign import java unsafe "setMaxIterations" setMaxIterationsLDA :: Int -> Java LDA LDA
+
+foreign import java unsafe "setSeed" setSeedLDA :: Int64 -> Java LDA LDA
+
+foreign import java unsafe setTopicConcentration :: Double -> Java LDA LDA
+
+-- End org.apache.spark.mllib.clustering.LDA
+
+-- Start org.apache.spark.mllib.clustering.LocalLDAModel
+
+type instance Inherits LocalLDAModel = '[LDAModel]
+
+-- End org.apache.spark.mllib.clustering.LocalLDAModel

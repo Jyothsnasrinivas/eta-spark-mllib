@@ -187,3 +187,7 @@ data {-# CLASS "org.apache.spark.mllib.evaluation.RankingMetrics" #-}
 data {-# CLASS "org.apache.spark.mllib.evaluation.RegressionMetrics" #-}
  RegressionMetrics = RegressionMetrics (Object# MultilabelMetrics)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.evaluation.binary.FalsePositiveRate" #-}
+ FalsePositiveRate = FalsePositiveRate (Object# FalsePositiveRate)
+  deriving Class

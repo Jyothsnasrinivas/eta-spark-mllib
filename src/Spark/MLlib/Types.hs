@@ -171,3 +171,7 @@ data {-# CLASS "org.apache.spark.mllib.evaluation.AreaUnderCurve" #-}
 data {-# CLASS "org.apache.spark.mllib.evaluation.BinaryClassificationMetrics" #-}
  BinaryClassificationMetrics = BinaryClassificationMetrics (Object# BinaryClassificationMetrics)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.evaluation.MulticlassMetrics" #-}
+ MulticlassMetrics = MulticlassMetrics (Object# MulticlassMetrics)
+  deriving Class

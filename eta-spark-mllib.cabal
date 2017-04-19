@@ -19,6 +19,7 @@ library
   exposed-modules:     Spark.MLlib.Types
                        Spark.MLlib.Classification
                        Spark.MLlib.Clustering
+                       Spark.MLlib.Evaluation
                        Spark.MLlib.Regression
   -- other-modules:
   -- other-extensions:

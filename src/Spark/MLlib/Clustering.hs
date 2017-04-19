@@ -102,3 +102,26 @@ foreign import java unsafe weights :: Java ExpectationSum JDoubleArray
 -- End org.apache.spark.mllib.clustering.ExpectationSum
 
 -- Start org.apache.spark.mllib.clustering.GaussianMixture
+
+foreign import java unsafe getConvergenceTol :: Java GaussianMixture Double
+
+foreign import java unsafe "getK" getKGM :: Java GaussianMixture Int
+
+foreign import java unsafe "getMaxIterations" getMaxIterationsGM :: Java GaussianMixture Int
+
+foreign import java unsafe "getSeed" getSeedGM :: Java GaussianMixture Int64
+
+foreign import java unsafe "run" runGM :: JavaRDD Vector -> Java GaussianMixture GaussianMixtureModel
+
+foreign import java unsafe "run"
+  runRDDGM :: RDD Vector -> Java GaussianMixture GaussianMixtureModel
+
+foreign import java unsafe setConvergenceTol :: Double -> Java GaussianMixture GaussianMixture
+
+foreign import java unsafe "setK" setKGM :: Int -> Java GaussianMixture GaussianMixture
+
+foreign import java unsafe "setMaxIterations"
+  setMaxIterationsGM :: Int -> Java GaussianMixture GaussianMixture
+
+foreign import java unsafe "setSeed"
+  setSeedGM :: Int64 -> Java GaussianMixture GaussianMixture

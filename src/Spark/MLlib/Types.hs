@@ -223,3 +223,7 @@ data {-# CLASS "org.apache.spark.mllib.feature.IDF" #-}
 data {-# CLASS "org.apache.spark.mllib.feature.IDF$DocumentFrequencyAggregator" #-}
  DocumentFrequencyAggregator = DocumentFrequencyAggregator (Object# DocumentFrequencyAggregator)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.feature.IDFModel" #-}
+ IDFModel = IDFModel (Object# IDFModel)
+  deriving Class

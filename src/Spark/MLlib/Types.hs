@@ -12,6 +12,10 @@ data {-# CLASS "org.apache.spark.mllib.linalg.Vector" #-}
   Vector = Vector (Object# Vector)
   deriving Class
 
+data {-# CLASS "org.apache.spark.mllib.linalg.Matrix" #-}
+  Matrix = Matrix (Object# Matrix)
+  deriving Class
+
 data {-# CLASS "org.apache.spark.mllib.classification.LogisticRegressionModel" #-}
   LogisticRegressionModel = LogisticRegressionModel (Object# LogisticRegressionModel)
   deriving Class

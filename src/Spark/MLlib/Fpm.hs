@@ -26,3 +26,13 @@ foreign import java unsafe javaAntecedent :: (item <: Object) => Java (Rule item
 foreign import java unsafe javaConsequent :: (item <: Object) => Java (Rule item) (List item)
 
 -- End org.apache.spark.mllib.fpm.AssociationRules.Rule
+
+-- Start org.apache.spark.mllib.fpm.AssociationRules.FreqItemset
+
+foreign import java unsafe freq :: (item <: Object) => Java (FreqItemset item) Int64
+
+foreign import java unsafe items :: (item <: Object) => Java (FreqItemset item) Object
+
+foreign import java unsafe javaItems :: (item <: Object) => Java (FreqItemset item) (List item)
+
+-- End org.apache.spark.mllib.fpm.AssociationRules.FreqItemset

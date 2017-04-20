@@ -259,3 +259,15 @@ data {-# CLASS "org.apache.spark.mllib.feature.Word2Vec" #-}
 data {-# CLASS "org.apache.spark.mllib.feature.Word2VecModel" #-}
  Word2VecModel = Word2VecModel (Object# Word2VecModel)
   deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.fpm.AssociationRules" #-}
+ AssociationRules = AssociationRules (Object# AssociationRules)
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.fpm.AssociationRules$Rule" #-}
+ Rule item = Rule (Object# (Rule item))
+  deriving Class
+
+data {-# CLASS "org.apache.spark.mllib.fpm.FPGrowth$FreqItemset" #-}
+ FreqItemset item = FreqItemset (Object# (FreqItemset item))
+  deriving Class
